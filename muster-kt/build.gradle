@@ -12,10 +12,13 @@ buildscript {
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}"
         classpath 'com.github.jengelman.gradle.plugins:shadow:6.1.0'
+        classpath 'com.adarshr:gradle-test-logger-plugin:2.1.1'
     }
+
 }
 
 apply plugin: 'application'
+apply plugin: 'com.adarshr.test-logger'
 
 mainClassName = "com.muster.kt.MusterKt"
 apply plugin: 'com.github.johnrengelman.shadow'
