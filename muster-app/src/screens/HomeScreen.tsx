@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, StyleSheet } from "react-native";
 
+// This is a JSX.Element
 const HomeScreen = () => {
   return (
     <>
