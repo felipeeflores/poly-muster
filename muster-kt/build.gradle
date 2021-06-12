@@ -60,6 +60,7 @@ dependencies {
     implementation "org.http4k:http4k-resilience4j:${http4kVersion}"
     implementation "org.http4k:http4k-server-ktorcio:${http4kVersion}"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.30"
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
     testImplementation "org.http4k:http4k-testing-approval:${http4kVersion}"
     testImplementation "org.http4k:http4k-testing-hamkrest:${http4kVersion}"
     testImplementation "org.junit.jupiter:junit-jupiter-api:5.7.0"
