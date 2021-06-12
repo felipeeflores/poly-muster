@@ -10,11 +10,9 @@ import org.http4k.routing.bind
 import org.http4k.routing.routes
 
 class Routes(private val handleCreateMinistry: (CreateMinistryRequest) -> Response) {
-
   private val createMinistryLens = Body.auto<CreateMinistryRequest>().toLens()
 
   val musterApp = routes(
-    "/" bind POST to { request: Request -> handleCreateMinistry(createMinistryLens(request)) },
+    "/ministry" bind POST to { request: Request -> handleCreateMinistry(createMinistryLens(request)) },
   )
-
 }
