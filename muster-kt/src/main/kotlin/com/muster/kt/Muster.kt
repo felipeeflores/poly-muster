@@ -24,6 +24,7 @@ fun main() {
     .then(ServerFilters.OpenTelemetryMetrics.RequestCounter())
     .then(ServerFilters.OpenTelemetryMetrics.RequestTimer())
     .then(app)
-    .asServer(KtorCIO(8080))
+    .asServer(KtorCIO(8888))
     .start()
+    .block()
 }
