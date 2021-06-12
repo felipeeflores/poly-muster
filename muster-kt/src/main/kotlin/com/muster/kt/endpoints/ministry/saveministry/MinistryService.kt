@@ -1,4 +1,4 @@
-package com.muster.kt.endpoints
+package com.muster.kt.endpoints.ministry.saveministry
 
 import com.muster.kt.model.Ministry
 import java.util.*

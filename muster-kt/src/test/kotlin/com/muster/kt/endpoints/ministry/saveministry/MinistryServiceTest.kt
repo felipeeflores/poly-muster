@@ -1,4 +1,4 @@
-package com.muster.kt.endpoints
+package com.muster.kt.endpoints.ministry.saveministry
 
 import com.natpryce.hamkrest.assertion.assertThat
 import com.natpryce.hamkrest.equalTo

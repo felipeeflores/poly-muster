@@ -1,6 +1,6 @@
 package com.muster.kt
 
-import com.muster.kt.endpoints.CreateMinistryRequest
+import com.muster.kt.endpoints.ministry.saveministry.CreateMinistryRequest
 import org.http4k.core.Body
 import org.http4k.core.Method.POST
 import org.http4k.core.Request

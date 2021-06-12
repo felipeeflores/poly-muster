@@ -1,8 +1,7 @@
 package com.muster.kt
 
-import com.muster.kt.endpoints.MinistryControllerImpl
-import com.muster.kt.endpoints.MinistryService
-import com.muster.kt.model.Ministry
+import com.muster.kt.endpoints.ministry.saveministry.MinistryControllerImpl
+import com.muster.kt.endpoints.ministry.saveministry.MinistryService
 import java.util.*
 
 object Runtime {
