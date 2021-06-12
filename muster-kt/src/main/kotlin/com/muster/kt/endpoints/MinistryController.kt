@@ -10,21 +10,14 @@ fun interface MinistryController {
 }
 
 class MinistryControllerImpl(
-  private val getUUID: () -> UUID,
-  private val saveMinistry: (Ministry) -> Optional<UUID>
+  private val saveMinistry: (CreateMinistryRequest) -> Optional<UUID>
 ) : MinistryController {
-  override fun handleSaveMinistry(createMinistryRequest: CreateMinistryRequest): Response {
-    val result = saveMinistry(
-      Ministry(
-        id = getUUID(),
-        name = createMinistryRequest.name,
-        description = createMinistryRequest.description
-      )
-    )
 
-    return result.map { uuid ->
+  override fun handleSaveMinistry(createMinistryRequest: CreateMinistryRequest): Response {
+    val ministry = saveMinistry(createMinistryRequest)
+    return ministry.map { uuid ->
       Response(Status.OK).body(uuid.toString())
     }.orElse(Response(Status.INTERNAL_SERVER_ERROR).body("unable to fulfil request"))
   }
-}
 
+}
