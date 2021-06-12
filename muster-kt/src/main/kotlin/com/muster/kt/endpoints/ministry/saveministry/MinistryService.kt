@@ -4,13 +4,13 @@ import com.muster.kt.model.Ministry
 import java.util.*
 
 class MinistryService(private val getUUID: () -> Optional<UUID>) {
-  private var ministryInMemoryStore = mutableMapOf<UUID, Ministry>()
+  private val ministryInMemoryStore = mutableMapOf<UUID, Ministry>()
 
   fun saveMinistry(createMinistryRequest: CreateMinistryRequest): Optional<UUID> {
-    return getUUID().map { uuid ->
+    return getUUID().flatMap { uuid ->
       val ministry = Ministry(uuid, createMinistryRequest.name, createMinistryRequest.description)
-      ministryInMemoryStore.put(uuid, ministry)
-      uuid
+      ministryInMemoryStore[uuid] = ministry
+      Optional.ofNullable(ministryInMemoryStore[uuid]).map { m -> m.id }
     }
   }
 }
