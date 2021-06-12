@@ -13,6 +13,6 @@ class Routes(private val handleCreateMinistry: (CreateMinistryRequest) -> Respon
   private val createMinistryLens = Body.auto<CreateMinistryRequest>().toLens()
 
   val musterApp = routes(
-    "/ministry" bind POST to { request: Request -> handleCreateMinistry(createMinistryLens(request)) },
+    "/v1/ministry" bind POST to { request: Request -> handleCreateMinistry(createMinistryLens(request)) },
   )
 }

@@ -23,7 +23,7 @@ internal class RoutesTest {
         "description": "bar"
       }
     """.trimIndent()
-    val response = musterApp(Request(POST, "/ministry").body(requestBody))
+    val response = musterApp(Request(POST, "/v1/ministry").body(requestBody))
     assertThat(response, hasStatus(OK).and(hasBody("an-uuid")))
   }
 }
