@@ -17,7 +17,7 @@ import org.http4k.lens.string
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
-class HelloWorldTest {
+internal class HelloWorldTest {
 
     @Test
     fun `Ping test`() {

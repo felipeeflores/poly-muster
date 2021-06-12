@@ -11,7 +11,7 @@ import org.http4k.core.Status.Companion.OK
 import org.http4k.hamkrest.hasBody
 import org.http4k.hamkrest.hasStatus
 
-class RoutesTest {
+internal class RoutesTest {
 
   private val musterApp = Routes( handleCreateMinistry = { Response(OK).body("an-uuid")}).musterApp
 
