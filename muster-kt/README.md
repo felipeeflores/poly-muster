@@ -19,3 +19,20 @@ Some decisions made so far:
   - Use http4k with ktor
   - Use harmkrest for testing
   - Use jackson for Json :sad_panda:
+
+
+## End Points
+
+### Ministries
+
+#### Save Ministry
+
+- URI: /v1/ministry
+- Method: POST
+- Content-Type: application/json
+- Sample request:
+  - ```
+    curl -XPOST -v -H "Content-Type: application/json" \
+    -d '{"name":"My Ministry","description":"a very important ministry"}'\
+    localhost:8888/v1/ministry
+    ```
