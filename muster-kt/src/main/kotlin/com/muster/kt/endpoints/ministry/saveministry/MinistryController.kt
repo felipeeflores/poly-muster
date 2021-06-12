@@ -5,7 +5,7 @@ import org.http4k.core.Status
 import java.util.*
 
 fun interface MinistryController {
-  fun handleSaveMinistry(ministry: CreateMinistryRequest): Response
+  fun handleSaveMinistry(createMinistryRequest: CreateMinistryRequest): Response
 }
 
 class MinistryControllerImpl(
