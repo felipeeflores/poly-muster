@@ -17,17 +17,17 @@ import org.http4k.lens.string
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
-class MusterTest {
+internal class HelloWorldTest {
 
     @Test
     fun `Ping test`() {
-        assertEquals(app(Request(GET, "/ping")), Response(OK).body("pong"))
+        assertEquals(HelloWorld.app(Request(GET, "/ping")), Response(OK).body("pong"))
     }
     @Test
     fun `Check Hamkrest matcher for http4k work as expected`() {
         val request = Request(GET, "/testing/hamkrest?a=b").body("http4k is cool").header("my header", "a value")
     
-        val response = app(request)
+        val response = HelloWorld.app(request)
     
         // response assertions
         assertThat(response, hasStatus(OK))
