@@ -8,11 +8,5 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
-<<<<<<< HEAD
 .DS_Store
 .vscode
-=======
-
-# macOS
-.DS_Store
->>>>>>> acb4178 (Create muster-app basic structure)
