@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "@react-native-community/masked-view": "0.1.10",
+<<<<<<< HEAD
     "@react-navigation/native": "^6.0.0-next.13",
+=======
+>>>>>>> acb4178 (Create muster-app basic structure)
     "expo": "~41.0.1",
     "expo-status-bar": "~1.0.4",
     "react": "16.13.1",
@@ -24,10 +27,14 @@
     "react-navigation-stack": "^2.10.4"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@babel/core": "^7.9.0",
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
     "typescript": "~4.0.0"
+=======
+    "@babel/core": "^7.9.0"
+>>>>>>> acb4178 (Create muster-app basic structure)
   },
   "private": true
 }
